@@ -1,3 +1,5 @@
-export function Add(a, b) {
-  return a + b;
-}
+import sum from './sum';
+
+export {
+  sum,
+};
