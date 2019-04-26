@@ -1,0 +1,63 @@
+{
+  "name": "@zcy/npm-test-cli",
+  "version": "0.0.1",
+  "description": "测试工具脚手架",
+  "main": "lib/index.js",
+  "scripts": {
+    "singleTest": "karma start --single-run",
+    "test": "karma start",
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build",
+    "check": "bash pre-commit-check.sh",
+    "lint-staged": "lint-staged",
+    "lint-staged:es": "eslint",
+    "lint": "npm run lint:es && npm run lint:style",
+    "lint:es": "eslint src  --ext '.js,.jsx'",
+    "lint:style": "stylelint \"src/**/*.less\" --syntax less",
+    "lint-fix": "eslint --fix src test --ext '.js,.jsx'"
+  },
+  "pre-commit": [
+    "check"
+  ],
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint-staged:es"
+    ],
+    "test/**/*.{js,jsx}": [
+      "npm run lint-staged:es"
+    ],
+    "src/**/*.less": "stylelint --syntax less",
+    "test/**/*.less": "stylelint --syntax less"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "commander": "^2.20.0",
+    "conventional-changelog": "^3.0.6",
+    "jasmine-core": "^3.4.0",
+    "karma": "^4.0.1",
+    "karma-babel-preprocessor": "^8.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-webpack": "^3.0.5",
+    "pre-commit": "^1.2.2",
+    "webpack": "^4.30.0",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-compat": "^2.2.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "number-precision": "^1.3.1"
+  }
+}
