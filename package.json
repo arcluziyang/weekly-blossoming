@@ -16,19 +16,19 @@
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",
     "lint-fix": "eslint --fix src test --ext '.js,.jsx'"
   },
-  "pre-commit": [
-    "check"
-  ],
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "npm run lint-staged:es"
     ],
     "test/**/*.{js,jsx}": [
       "npm run lint-staged:es"
-    ],
-    "src/**/*.less": "stylelint --syntax less",
-    "test/**/*.less": "stylelint --syntax less"
+    ]
   },
+  "pre-commit": [
+    "check",
+    "lint-staged",
+    "singleTest"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -54,10 +54,8 @@
     "eslint-plugin-compat": "^2.2.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "lint-staged": "^7.2.0"
   },
-  "dependencies": {
-    "moment": "^2.24.0",
-    "number-precision": "^1.3.1"
-  }
+  "dependencies": {}
 }

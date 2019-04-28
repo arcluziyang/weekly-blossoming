@@ -1,4 +1,4 @@
-import sum from './sum';
+import sum from './week1-sum';
 
 export {
   sum,
