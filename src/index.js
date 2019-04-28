@@ -1,3 +1,6 @@
-export function Add(a, b) {
-  return a + b;
-}
+import demo from './demo';
+
+export {
+  demo,
+};
+
