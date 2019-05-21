@@ -56,7 +56,7 @@
 }
 
 {
-    console.log('方法三：将数字拆分为单个数值，转换数值位置后相加为新的数值，比较两个数字是否相等');
+    console.log('方法三：分别用栈和队列保存每个位置上的数字，然后取出来判断是否相等 - 不在将数字转换为字符串');
     const isPalindrome = function(x) {
         if (x < 0) {
             return false;
@@ -66,19 +66,23 @@
             return true;
         }
 
-        let num = x;
-        let numArray = [];
-        while (num > 0) {
-            numArray.push(num % 10);
-            num = parseInt(num / 10);
+        let backupX = x;
+        let stack = [];
+        let queue = [];
+
+        while (backupX > 0) {
+            let residue = backupX % 10;
+            stack.push(residue);
+            queue.push(residue);
+            backupX = parseInt(backupX / 10);
         }
 
-        let targetNum = 0;
-        numArray.forEach((d, i) => {
-            targetNum += d * Math.pow(10, numArray.length - i - 1);
-        });
-
-        return targetNum == x;
+        while (stack.length > 0) {
+            if (stack.pop() != queue.shift()) {
+                return false;
+            }
+        }
+        return true;
     };
     console.log(isPalindrome(121));
     console.log(isPalindrome(-121));
