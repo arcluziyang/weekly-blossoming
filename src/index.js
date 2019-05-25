@@ -1,5 +1,7 @@
-import sum from './week1-sum';
+import sumOne from './week1-sum';
+import reverseTwo from './week2-reverse';
 
 export {
-  sum,
+  sumOne,
+  reverseTwo,
 };
