@@ -18,7 +18,7 @@ export default function reverseTwo(x) {
     if (b > max) {
       return 0;
     }
-    return b;
+    return Number(b);
   } else {
     if (-b < min) {
       return 0;
