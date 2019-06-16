@@ -15,6 +15,7 @@
     "jasmine": true
   },
   "rules": {
+    "linebreak-style": [0,"error", "windows"],
     "no-useless-escape": [0],
     "indent": ["error", 2],
     "array-callback-return": [0],
