@@ -3,6 +3,7 @@ import reverseTwo from './week2-reverse';
 import strThree from './w3-str';
 import lengthOfLastWord from './w4-strlen';
 import plusOne from './w5-plusOne';
+import mode from './w6-mode';
 
 export {
   sumOne,
@@ -10,4 +11,5 @@ export {
   strThree,
   lengthOfLastWord,
   plusOne,
+  mode,
 };
