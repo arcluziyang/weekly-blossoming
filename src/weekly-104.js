@@ -43,7 +43,7 @@ export const maxDepth = function (roots = []) {
       } else {
         addLeftNode(node.left, child, level += 1);
       }
-    }
+    };
 
     const addRightNode = (node, child, level = 1) => {
       if (level > rightMaxDepth) {
