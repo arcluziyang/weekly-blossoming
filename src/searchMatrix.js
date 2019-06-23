@@ -19,4 +19,4 @@ export default function searchMatrix(matrix, target) {
   });
 
   return result;
-};
+}
