@@ -4,6 +4,7 @@ import strThree from './w3-str';
 import lengthOfLastWord from './w4-strlen';
 import plusOne from './w5-plusOne';
 import mode from './w6-mode';
+import numJewelsInStones from './week7';
 
 export {
   sumOne,
@@ -12,4 +13,5 @@ export {
   lengthOfLastWord,
   plusOne,
   mode,
+  numJewelsInStones,
 };
