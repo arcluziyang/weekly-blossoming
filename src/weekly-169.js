@@ -16,4 +16,4 @@ export const mode = (nums) => {
       max = 1;
     }
   }
-}
+};
