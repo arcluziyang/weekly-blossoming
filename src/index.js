@@ -6,6 +6,7 @@ import plusOne from './w5-plusOne';
 import mode from './w6-mode';
 import numJewelsInStones from './week7';
 import toLowerCase from './week8';
+import flipAndInvertImage from './week9';
 
 export {
   sumOne,
@@ -16,4 +17,5 @@ export {
   mode,
   numJewelsInStones,
   toLowerCase,
+  flipAndInvertImage,
 };
