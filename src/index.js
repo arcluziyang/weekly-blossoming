@@ -8,6 +8,7 @@ import numJewelsInStones from './week7';
 import toLowerCase from './week8';
 import flipAndInvertImage from './week9';
 import generate from './week10';
+import findTheDifference from './week11.js';
 
 export {
   sumOne,
@@ -20,4 +21,5 @@ export {
   toLowerCase,
   flipAndInvertImage,
   generate,
+  findTheDifference,
 };
